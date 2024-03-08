@@ -1,0 +1,21 @@
+1.Pegar uma lâmpada;
+2.pegar uma escada ou uma cadeira;
+3.subir na escada;
+4.tirar a lapada velha;
+5; descer da escada;
+6.botar a lampada velha em uma mesa;
+7.pegar a nova lampada;
+8.subir a escada;
+9. colocar a lampada;
+10. descer da escada;
+11.guardar a escada;
+
+//IR PARA O SENAC.
+1.abrir os olhos;
+2.levantar;
+3.tomar banho;
+3.5.se vestir;
+4.tomar café da manhã;
+5.escovar os dentes;
+6.ir para o carro;
+7.chegar e ir para a aula;

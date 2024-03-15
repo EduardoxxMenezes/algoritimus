@@ -44,3 +44,15 @@ switch(pais){
      print("pais não encontrado")
     break
 }
+let pokemoninicial = "bulbasauro"
+switch(pokemoninicial){
+    case "bulbasauro": print("planta e agua!")
+        break
+    case "Charmander": print("fogo")
+        break
+    case "squirtle": print("água")
+        break
+    default:
+        print("Pokémon não identificado, por favor se retirar.")
+}
+    

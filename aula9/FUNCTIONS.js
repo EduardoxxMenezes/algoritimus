@@ -1,3 +1,11 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+input: process.stdin,
+output: process.stdout
+});
+
+
 function ya(altura, largura){
     let ne = altura * largura
     console.log(`area é:  ${ne}`)
@@ -32,9 +40,18 @@ console.log(`a sua média é: ${notafinal}`)}
 
 notas(10,5,3)
 
-function parto(mae){let a = mae%2
+function parto(mae){
+    mae = Number(mae)
+let a = mae%2
 let b = a == 0
-if(b == true){ console.log("PARABENS, seu numero é par, que impressionante, waw, todos nos super nos importamos com você.")}
-else{console.log("seu numero é primo.")}}
+if(b == true)
+{ 
+    console.log("PARABENS, seu numero é par, que impressionante, waw, todos nos super nos importamos com você.")
+}
+else if (b == false)
+{console.log("seu numero é impar.")}}
 
-parto(9530294384860368308942039086093584309580385094385032403484098309820948936576485290482048104803198)
+rl.question("qual se numero", (numero) => {
+    parto(numero)
+    rl.close()
+})

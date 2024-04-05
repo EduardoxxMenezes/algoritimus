@@ -13,14 +13,15 @@ console.log(numeros)}{console.log(fabiana); fabiana = fabiana - 1}
 
     //VAMO NESSA
 
-    let aham = read.question("DIGA UM NUMERO ")
-    Number(aham)
-  list = []
+    let dor = read.question("DIGA UM NUMERO ")
+    Number(dor)
   lenght = list.length
-  while(list[lenght] != 0){
-    list.push(aham)
-  list[length + 1] = read.question("DIGA OUTRO NUMERO")
-  
-  Number(list[length])
-  }
-  while(list[length] < -1){ CALCULO = list[length] +; console.log(list)}
+  while(dor != 0){
+    
+  dor = read.question("DIGA OUTRO")
+      Number(a)
+desgosto = desgosto + dor}
+console.log(desgosto)
+//desculpa pelos nomes, eu tava com raiva por não 
+//ter visto algo tão simples.
+      

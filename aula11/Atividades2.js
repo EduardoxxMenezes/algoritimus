@@ -11,17 +11,19 @@ console.log(numeros)}{console.log(fabiana); fabiana = fabiana - 1}
     console.log("FELIZ ANO NOVO!")
     
 
-    //VAMO NESSA
+const read = require('readline-sync')
 
-    let dor = read.question("DIGA UM NUMERO ")
-    Number(dor)
-  lenght = list.length
-  while(dor != 0){
-    
-  dor = read.question("DIGA OUTRO")
-      Number(a)
-desgosto = desgosto + dor}
-console.log(desgosto)
-//desculpa pelos nomes, eu tava com raiva por não 
-//ter visto algo tão simples.
+const read = require('readline-sync')
+
+
+let numeroq = read.question("DIGA UM NUMERO ")
+Number(numeroq)
+let soma = 0 
+while(numeroq != 0){
+ soma = soma + numeroq
+ soma = Number(soma)
+numeroq = read.question("DIGA OUTRO")
+numeroq  = Number(numeroq)
+}
+console.log(soma)
       

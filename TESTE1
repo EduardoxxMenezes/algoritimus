@@ -1,0 +1,97 @@
+const rl = require('readline-sync')
+class professor{
+    nome: string
+    idade: number
+    Experiencia: number
+    constructor(nome: string, idade: number, experiencia: number)
+    {
+        this.nome = nome
+        this.Experiencia = experiencia
+        this.idade = idade
+    }
+    getProfessor(): void{
+        console.log(`Olá, eu me chamo ${this.nome}, tenho ${this.idade} e trabalho como ensinadora há mais de ${this.Experiencia}`)
+    }
+    setProfessor(): void {
+        let nomes = rl.question("Qual o nome da nova professora?")
+        let idades = rl.question("Qual a idade da criatura?")
+        let experiencias = rl.question("E a hisperiencia")
+        this.nome = nomes
+        this.idade = idades
+        this.Experiencia = experiencias
+
+    }
+}
+
+class escola{
+    professores: professor
+    nome: string
+    endereco: string
+    numero: number
+    constructor(professores: professor, nome: string, numero: number, endereco: string){
+        this.professores = professores
+        this.nome = nome
+        this.endereco = endereco
+        this.numero = numero
+    }
+    getScola(): void{
+        console.log(`A escola ${this.nome} é perfeita pra seus filhos!, ela se localiza em ${this.endereco}, ${this.numero}, e tem ${this.professores} como ensinadores!`)}
+    setScola(): void{
+        this.professores.setProfessor()
+        let nomes = rl.question("Qual o nome da escola")
+        let enderecos = rl.question("qual o endereco?")
+        let numeros = rl.question("qual o numero?")
+        this.nome = nomes
+        this.endereco = enderecos
+        this.numero = numeros
+    }
+}
+let professores1 = [ new professor("",0,0)]
+let profLength = professores1.length
+let escola1 = new escola(professores1[0],"",0,"")
+
+let menu = true
+while(menu == true){
+    
+    let escolha = rl.questionInt("BEM VINDO AO MENU! ESCOLHA! \n 1. ADICIONAR PROFESSOR. \n 2. CRIAR ESCOLA. \n 3.MODIFICAR PROFESSOR. \n 4. MODIFICAR ESCOLA. \n 5.VISUALIZAR PROFESSOR. \n 6.VISUALIZAR ESCOLA. \n 0. SAIR")
+     
+
+    switch (escolha){ 
+
+    case  1: professores1.push( new professor("",0,0))
+    professores1[profLength -1 ].setProfessor()
+    break
+    case 2: 
+    let ProfEscolha = rl.question("Qual o professor? QUANTIDADE DISPONIVEL: ", profLength - 1)
+    
+     escola1 = new escola(professores1[ProfEscolha],"",0,"")
+    escola1.setScola()
+    escola1.getScola()
+    break
+    case 3:
+        let profNumb1 = rl.question("Qual o professor? QUANTIDADE DISPONIVEL:", profLength - 1) 
+        professores1[profNumb1].setProfessor()
+    break
+    case  4:
+    escola1.setScola()
+    break
+    case 5: 
+    let profNumb = rl.question("Qual o professor? QUANTIDADE DISPONIVEL:", profLength - 1) 
+    professores1[profNumb].getProfessor()
+    case 6: 
+    escola1.getScola()
+    break
+    case 0:
+        console.log("OBRIGADO POR NOS ESCOLHER.")
+        menu = false
+        process.exit(0)
+    break
+}}
+    console.log("seus professores: ")
+    for(let i = 0; i < profLength; i++)
+    {
+        
+       console.log(i,". ", professores1[i])
+    }
+    console.log("Sua escola: ")
+    console.log(escola1)
